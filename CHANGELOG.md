@@ -1,3 +1,8 @@
+## 2025-10-31 - Update ASCII banner design
+
+### Changed
+- Updated README ASCII banner with new design
+
 ## 2025-10-31 - Initial repository setup and documentation
 
 ### Added
