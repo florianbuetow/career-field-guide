@@ -1,7 +1,10 @@
-## 2025-10-31 - Update ASCII banner design
+## 2025-10-31 - Improve README structure
+
+### Added
+- Repository structure tree showing folder organization
 
 ### Changed
-- Updated README ASCII banner with new design
+- Replaced ASCII banner with simple markdown h1 title
 
 ## 2025-10-31 - Initial repository setup and documentation
 

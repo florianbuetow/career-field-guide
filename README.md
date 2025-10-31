@@ -1,15 +1,28 @@
-```
- $$$\   $$$\  $$$$\  $$$$\ $$$$\ $$$$\         $$$\  $\   $\ $$$\ $$$$\  $$$$\
-$  __$\ $  __$\ $  __$\ $  _____|$  _____|$  __$\       $  __$\ $ |  $ |\_$  _|$  __$\ $  _____|
-$ /  \__|$ /  $ |$ |  $ |$ |      $ |      $ |  $ |      $ /  \__|$ |  $ |  $ |  $ |  $ |$ |
-$ |      $$$$ |$$$$  |$$$\    $$$\    $$$$  |      $ |$$\ $ |  $ |  $ |  $ |  $ |$$$\
-$ |      $  __$ |$  __$< $  __|   $  __|   $  __$<       $ |\_$ |$ |  $ |  $ |  $ |  $ |$  __|
-$ |  $\ $ |  $ |$ |  $ |$ |      $ |      $ |  $ |      $ |  $ |$ |  $ |  $ |  $ |  $ |$ |
-\$$$  |$ |  $ |$ |  $ |$$$$\ $$$$\ $ |  $ |      \$$$  |\$$$  |$$$\ $$$$  |$$$$\
- \______/ \__|  \__|\__|  \__|\________|\________|\__|  \__|       \______/  \______/ \______|\_______/ \________|
-```
+# Career Field Guide
 
 A curated list of guides, templates and resources for the tech career.
+
+## Repository Structure
+
+```
+.
+├── README.md                # This file
+├── CLAUDE.md                # Claude Code guidance
+├── CHANGELOG.md             # Project changelog
+├── LICENSE.md               # Full license text
+├── LICENSE-DEED.md          # License summary
+├── Makefile                 # Automation scripts
+├── interview-prep/          # Interview preparation guides
+│   ├── README.md            # Interview prep overview
+│   ├── behavioral/          # Behavioral interview resources
+│   ├── resume-based/        # Resume-focused interview guides
+│   ├── system-design/       # System design interview prep
+│   └── technical/           # Technical interview resources
+├── roadmaps/                # Career roadmaps and progression guides
+└── templates/               # Templates for career documents
+    ├── brag-docs/           # Brag document templates
+    └── resumes/             # Resume templates
+```
 
 ## Content
 
