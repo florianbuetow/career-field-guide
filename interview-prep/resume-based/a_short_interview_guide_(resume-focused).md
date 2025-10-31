@@ -1,4 +1,4 @@
-# ~A Short Interview Guide (Resume-Focused)~
+# A Short Interview Guide (Resume-Focused)
 by LeetCoders United
 ![](images/lcu_interview-guide-resume-focused.jpg)
 **Session Overview:** This guide is the script for our practice session. Our goal is to practice using a resume as the central tool to communicate value, skills, and cultural fit for a new role. This practice is a critical step in the interview preparation process because these questions may appear at *every* stage of the interview process - from the phone screen with the recruiter to a project dive in a technical or behavioural round to the final interview with the hiring manager and/or CTO.
