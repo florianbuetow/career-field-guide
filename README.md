@@ -2,11 +2,9 @@
 
 Curated list of guides, templates and resources for the tech career.
 
-## Contents
+## Content
 
-### [Interview Prep](./interview-prep/)
-Comprehensive guides for technical interview preparation:
-- **[Resume-Based Interviews](./interview-prep/resume-based/)** - Practice and preparation for resume-focused interviews
+[Interview Preparation](./interview-prep/)
 
 ## License
 
