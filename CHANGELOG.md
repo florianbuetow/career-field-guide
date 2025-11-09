@@ -1,3 +1,11 @@
+## 2025-11-09 - Add behavioral interview question bank guide
+
+### Added
+- Behavioral interview question bank guide (resume-based) with accompanying image
+
+### Documentation
+- Updated interview-prep README to include new behavioral interview guide
+
 ## 2025-10-31 - Improve README structure
 
 ### Added
