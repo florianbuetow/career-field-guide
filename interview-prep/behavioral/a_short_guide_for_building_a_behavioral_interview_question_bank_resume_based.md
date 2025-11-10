@@ -230,7 +230,7 @@ Create a coverage matrix to ensure you can answer questions from all 9 clusters:
 
 ### Step 4: Identify Coverage Gaps
 
-If you don't have a story for Clusters 1 or 2 (conflict/failure), create one. These are ****mandatory**** for senior roles.
+If you don't yet have a story for Clusters 1 or 2 (conflict/failure), write one. These are ****mandatory**** for senior roles.
 
 ****The Senior IC Red Flag:**** Having no stories for conflict or failure is a major red flag. An inability to provide an example of conflict is often "a signal that they were not actually that senior because they didn't work on complicated projects."
 
@@ -239,14 +239,14 @@ In most complex, high-stakes engineering projects, trade-offs are inevitable, wh
 ### Step 5: Practice Articulating Each Story
 
 Practice telling each story in both formats:
-- ****Technically-Deep STAR format**** (2-3 minutes): For questions that ask for depth, include specific technical details in the Action section
-- ****CARL format**** (1.5-2 minutes): For conciseness and impact focus
+- ****Technically-Deep STAR format**** (2-3 minutes): For questions that ask for depth, include specific technical details in the Action section.
+- ****CARL format**** (1.5-2 minutes): For conciseness and impact focus.
 
 ---
 
 # 4. Adapting Stories to Company Values
 
-Once you have your core stories, the next step is adapting them to align with each company's cultural principles. Behavioral answers should reflect ****competence**** and ****alignment with company culture****.
+Once you have your core stories, the next step is adapting them to align with each company's cultural principles. Behavioral answers should reflect ****competence**** and ****alignment with company culture**** as much as possible.
 
 ## Why Company Alignment Matters
 
@@ -256,7 +256,9 @@ If you fail to show these signals—for instance, by not demonstrating speed and
 
 ## Major Company Values Frameworks
 
-| **Company** | **Framework** | **Summary of Key Points** | **Source** |
+Different companies have different values, here is a taste of it:
+
+| **Company** | **Framework** | **Summary of Key Points** | **Continue reading** |
 |---|---|---|---|
 | ****Amazon**** | Leadership Principles | 16 principles including Customer Obsession, Ownership, Bias for Action, Deliver Results, and Dive Deep. | [Leadership Principles](https://www.aboutamazon.com/about-us/leadership-principles) |
 | ****Google**** | Googliness | Collaboration, Innovation, Humility, and Data-Driven Decision Making. | [Interview Tips](https://careers.google.com/how-we-hire/interview-tips/) |
@@ -266,11 +268,11 @@ If you fail to show these signals—for instance, by not demonstrating speed and
 
 ## How to Adapt Your Stories
 
-You should analyze the framework of your target company carefully to identify the principles that align most closely with your experiences. ****You only need to adjust the emphasis**** of your story—highlighting different aspects for different companies.
+You should analyze the framework of your target company carefully to identify the principles that align most closely with your stories and experiences. ****You only need to adjust the emphasis**** of your story—highlighting different aspects for different companies. Consider this a fine-tuning step for your story bank.
 
 ### Example: One Story, Five Companies
 
-Here's how the same CI/CD pipeline story adapts across companies:
+Here's how the same CI/CD pipeline story could be adapt across different companies:
 
 | **Company** | **Value Emphasis** | **How to Adapt the Story** |
 |---|---|---|
@@ -290,7 +292,7 @@ The appendix contains 136 behavioral questions organized into the 9 competency c
 
 1. ****Test your story coverage:**** Can you adapt your 8-10 stories to answer questions from each cluster?
 2. ****Identify weak spots:**** If you struggle to answer questions from a particular cluster, you may need to develop a new story or refine an existing one.
-3. ****Practice adaptation:**** Pick random questions and practice telling the most relevant story with the appropriate emphasis.
+3. ****Practice adaptation:**** Pick random questions and practice telling the most relevant story with the appropriate emphasis. Preferably in a mock interview where you can get feedback on your story and delivery.
 
 ## How to Use the Question Tool
 
@@ -310,10 +312,10 @@ The appendix contains 136 behavioral questions organized into the 9 competency c
 
 ### Exercise 3: Finding Additional Questions
 
-When you want more practice questions beyond the 136 in this guide:
+It is a good idea to look for questions that your target company has asked in the past. You can... 
+
 - Use web search to find company-specific questions (e.g., "Amazon behavioral interview questions")
-- Check Glassdoor and Blind for real candidate experiences
-- Map new questions to your existing stories
+- Check Glassdoor and Blind for real candidate experiences which often mention questions asked
 
 ---
 
@@ -354,9 +356,13 @@ Follow this sequence to build an effective interview preparation system:
 - Get feedback from peers or mentors
 - Focus on including specific technical details in the Action section for STAR format
 
+### 7. Find company-specific questions
+- Using Websearch
+- Look for interview "brain dumps" (e.g., Glassdoor, Blind, ...)
+
 ## Reusability Beyond Interviews
 
-The CARL format is universal and can be applied throughout your tech career:
+The CARL format is universal and can be applied throughout your tech career. The investment in getting good at building your impact stories is a skill that translates well to:
 - ****Performance reviews:**** Use CARL stories in your brag document
 - ****Resume/CV:**** Structure project descriptions using CARL
 - ****Promotion packets:**** Demonstrate impact with CARL stories
@@ -372,7 +378,7 @@ The CARL format is universal and can be applied throughout your tech career:
 
 3. ****Company Values Research**** – Always check the official careers page for your target company's value framework
 
-4. ****Story Bank Template**** – See Section 8 for a worksheet template
+4. ****Story Bank Template**** – See Section 8 below, for a worksheet template
 
 ---
 
@@ -392,7 +398,7 @@ This is where you capture the full technical depth of each story. Use the STAR f
 ### How to Fill This Out:
 - ****Situation****: Set the scene in 2-3 sentences. What was broken/challenging?
 - ****Task****: What was your specific responsibility? (1 sentence)
-- ****Action****: THIS IS THE MOST IMPORTANT COLUMN. Include specific technical details: tools used, technologies chosen, implementation approach, testing methodology. Write 4-6 sentences.
+- ****Action****: This is argubly the most important column. Include specific technical details: tools used, technologies chosen, implementation approach, testing methodology. Write 4-6 sentences.
 - ****Result****: Quantify everything. Use percentages, time saved, errors reduced, users impacted.
 - ****Learning****: Optional but valuable for CARL adaptation. What insight did you gain?
 
@@ -400,7 +406,7 @@ This is where you capture the full technical depth of each story. Use the STAR f
 
 ## Template 2: Company Adaptation Table (CARL Format)
 
-This shows how to adapt your stories for different questions and different companies. Each row represents: one question + one company + CARL answer tailored to that company's values.
+This table is for your company-adapted stories for different questions and different companies. Each row represents one question + one company + a CARL answer tailored to that company's values.
 
 | **Question** | **Company** | **Value(s)** | **Context** | **Action** | **Result** | **Learning** |
 |---|---|---|---|---|---|---|
@@ -433,7 +439,7 @@ Same story (CI/CD Pipeline) can be used for multiple questions across multiple c
 
 ## Template 3: Question Coverage Matrix
 
-Use this to verify your stories cover all question types across clusters:
+This is a template you can use to verify your stories cover all question types across competency clusters:
 
 | **Story Title** | Cluster 1 (Conflict) | Cluster 2 (Failure) | Cluster 3 (Technical) | Cluster 4 (Pressure) | Cluster 5 (Initiative) | Cluster 6 (Teamwork) | Cluster 7 (Learning) | Cluster 8 (Foundational) | Cluster 9 (Culture Fit) |
 |---|---|---|---|---|---|---|---|---|---|
@@ -472,7 +478,7 @@ Keep this as a cheat sheet during practice:
 
 Building a Story Bank is not about memorizing scripts—it's about deeply understanding your own experiences and being able to communicate them flexibly and authentically. The best interview answers feel natural and conversational, not rehearsed.
 
-Start with your 8-10 core stories. Practice adapting them. Use the 136 questions to test your coverage. Align with company values. And remember: ****the interview is not about perfection—it's about demonstrating growth, ownership, and the ability to learn from experience.****
+Start with a single story first, and later expand it to 8-10 core stories. Practice adapting them. Use the 136 questions to test your coverage. Align with company values. And remember: ****the interview is not about perfection—it's about demonstrating the core competencies and company values.****
 
 Good luck!
 
