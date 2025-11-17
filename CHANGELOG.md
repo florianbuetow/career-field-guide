@@ -1,3 +1,13 @@
+## 2025-11-17 - Add high performance category
+
+### Added
+- High Performance category with Laser Focus guide (markdown and PDF)
+- README.md for high-performance section
+
+### Documentation
+- Updated main README with high-performance category in structure tree
+- Added high-performance content link to main README
+
 ## 2025-11-09 - Add behavioral interview question bank guide
 
 ### Added

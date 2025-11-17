@@ -12,6 +12,8 @@ A curated list of guides, templates and resources for the tech career.
 ├── LICENSE.md               # Full license text
 ├── LICENSE-DEED.md          # License summary
 ├── Makefile                 # Automation scripts
+├── high-performance/        # Performance and productivity guides
+│   └── README.md            # High performance overview
 ├── interview-prep/          # Interview preparation guides
 │   ├── README.md            # Interview prep overview
 │   ├── behavioral/          # Behavioral interview resources
@@ -25,6 +27,8 @@ A curated list of guides, templates and resources for the tech career.
 ```
 
 ## Content
+
+[High Performance](./high-performance/)
 
 [Interview Preparation](./interview-prep/)
 
