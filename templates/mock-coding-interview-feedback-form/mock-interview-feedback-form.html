@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mock Interview Feedback Form</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --page-bg:   #f6f9fc;
+    --card-bg:   #ffffff;
+    --navy:      #02203c;
+    --muted:     #445d6e;
+    --border:    #e3e9ef;
+    --accent:    #1c4f82;
+    --shadow:    0 1px 3px rgba(2, 32, 60, .10);
+    --shadow-lg: 0 2px 8px rgba(2, 32, 60, .16);
+    --sans:      "Open Sans", Helvetica, Arial, sans-serif;
+    --display:   Ubuntu, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 72px 24px 96px;
+    background: var(--page-bg);
+    font-family: var(--sans);
+    font-size: 16px;
+    color: var(--navy);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  form { max-width: 800px; margin: 0 auto; }
+
+  /* ---------- typography ---------- */
+
+  h1 {
+    font-family: var(--display);
+    font-size: 35px;
+    font-weight: 400;
+    margin: 0 0 24px;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 16px;
+  }
+
+  h3 {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--muted);
+    text-align: center;
+    margin: 56px 0 24px;
+  }
+
+  p {
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0 0 16px;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    max-width: 540px;
+    margin: 56px auto;
+  }
+
+  /* ---------- info banner ---------- */
+
+  .banner {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .banner svg {
+    flex: 0 0 auto;
+    width: 26px;
+    height: 26px;
+    fill: var(--accent);
+    margin-top: 1px;
+  }
+  .banner p { margin: 0; }
+
+  /* ---------- yes / no questions ---------- */
+
+  fieldset { border: 0; margin: 0 0 28px; padding: 0; }
+
+  legend {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--muted);
+    padding: 0;
+  }
+  legend .hint {
+    display: block;
+    font-weight: 400;
+    margin-top: 4px;
+  }
+
+  .choices { display: flex; gap: 12px; margin-top: 10px; }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--card-bg);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: 10px 18px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: box-shadow .12s ease;
+  }
+  .chip:hover { box-shadow: var(--shadow-lg); }
+
+  /* ---------- radios ---------- */
+
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    border: 2px solid var(--navy);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow .12s ease;
+  }
+  input[type="radio"]:checked {
+    box-shadow: inset 0 0 0 3px var(--card-bg), inset 0 0 0 16px var(--accent);
+  }
+  input[type="radio"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  /* ---------- rating grids ---------- */
+
+  .grid { --cols: 4; }
+
+  .grid-head,
+  .rating-row {
+    display: grid;
+    grid-template-columns: 175px repeat(var(--cols), 1fr);
+    align-items: center;
+  }
+
+  .grid-head {
+    padding: 0 8px 10px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .grid-head span { text-align: center; }
+
+  .rating-row {
+    background: var(--card-bg);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: 18px 8px;
+  }
+  .row-label {
+    padding-left: 14px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    cursor: pointer;
+  }
+
+  .desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 76px;
+    padding: 12px 40px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  /* ---------- final score rows ---------- */
+
+  .final-head {
+    display: grid;
+    align-items: end;
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .final-head span { text-align: center; padding: 0 6px; }
+
+  .final-row {
+    display: grid;
+    background: var(--card-bg);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: 18px 0;
+  }
+
+  /* ---------- narrow screens ---------- */
+
+  @media (max-width: 700px) {
+    body { padding-top: 48px; }
+    h1 { font-size: 28px; }
+    .grid-head,
+    .rating-row { grid-template-columns: 110px repeat(var(--cols), 1fr); }
+    .row-label { padding-left: 8px; font-size: 14px; }
+    .desc { padding: 12px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<form id="feedback-form">
+
+  <h1>Mock Interview Feedback Form</h1>
+
+  <div class="banner">
+    <svg viewBox="0 0 330 330" aria-hidden="true"><path d="M165 0C74.019 0 0 74.02 0 165.001S74.019 330 165 330s165-74.018 165-164.999S255.981 0 165 0m0 300c-74.44 0-135-60.56-135-134.999S90.56 30 165 30s135 60.562 135 135.001S239.439 300 165 300"/><path d="M164.998 70c-11.026 0-19.996 8.976-19.996 20.009 0 11.023 8.97 19.991 19.996 19.991s19.996-8.968 19.996-19.991c0-11.033-8.97-20.009-19.996-20.009M165 140c-8.284 0-15 6.716-15 15v90c0 8.284 6.716 15 15 15s15-6.716 15-15v-90c0-8.284-6.716-15-15-15"/></svg>
+  </div>
+
+  <p>Giving and receiving feedback is a large part of getting better at coding interviews. Spend a few minutes filling this out for your partner as honestly and specifically as you can - your answers are meant to be shared with them.</p>
+
+  <hr>
+
+  <!-- ===================== GENERAL FEEDBACK ===================== -->
+
+  <h2>General Feedback</h2>
+
+  <fieldset>
+    <legend>Did this person show up to the interview?</legend>
+    <div class="choices">
+      <label class="chip"><input type="radio" name="present" value="yes"> Yes</label>
+      <label class="chip"><input type="radio" name="present" value="no"> No</label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Was this person respectful and professional?</legend>
+    <div class="choices">
+      <label class="chip"><input type="radio" name="professional" value="yes"> Yes</label>
+      <label class="chip"><input type="radio" name="professional" value="no"> No</label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Are you okay with potentially being rematched with this person?
+      <span class="hint">They won't see your answer to this question.</span>
+    </legend>
+    <div class="choices">
+      <label class="chip"><input type="radio" name="rematch" value="yes"> Yes</label>
+      <label class="chip"><input type="radio" name="rematch" value="no"> No</label>
+    </div>
+  </fieldset>
+
+  <hr>
+
+  <!-- ===================== INTERVIEWEE FEEDBACK ===================== -->
+
+  <h2>Interviewee Feedback</h2>
+  <p>This section mirrors the structure of the feedback forms that interviewers at large tech companies fill out for the candidates they interview.</p>
+  <p>In the "Performance" section, hover over a score to see what it stands for. Selecting a score keeps its description visible.</p>
+
+  <h3>Performance</h3>
+  <div class="grid" style="--cols:4" id="interviewee-grid">
+    <div class="grid-head"><span></span><span>1</span><span>2</span><span>3</span><span>4</span></div>
+  </div>
+
+  <h3>Final Score</h3>
+  <div id="interviewee-final"></div>
+
+  <hr>
+
+  <!-- ===================== INTERVIEWER FEEDBACK ===================== -->
+
+  <h2>Interviewer Feedback</h2>
+  <p>For the "Hint Giving" field: if your partner gave you no hints because you never needed one, give them the maximum score of 3.</p>
+
+  <fieldset>
+    <legend>Did this person prepare the interview question ahead of time?</legend>
+    <div class="choices">
+      <label class="chip"><input type="radio" name="prepared" value="yes"> Yes</label>
+      <label class="chip"><input type="radio" name="prepared" value="no"> No</label>
+    </div>
+  </fieldset>
+
+  <h3>Performance</h3>
+  <div class="grid" style="--cols:3" id="interviewer-grid">
+    <div class="grid-head"><span></span><span>1</span><span>2</span><span>3</span></div>
+  </div>
+
+  <h3>Final Score</h3>
+  <div id="interviewer-final"></div>
+
+</form>
+
+<script>
+/* ------------------------------------------------------------------
+   Rating definitions. Each score carries a description. Hovering a score
+   previews it; selecting a score pins it under the row.
+   ------------------------------------------------------------------ */
+
+const intervieweeRows = [
+  {
+    name: "algorithms",
+    label: "Algorithms",
+    scores: [
+      "Could not arrive at a working algorithm, even with substantial guidance. Gaps in core data-structure and algorithm knowledge were clearly visible.",
+      "Reached an algorithm only after repeated hints. The approach was noticeably suboptimal and the complexity analysis was shaky or absent.",
+      "Reached a correct and reasonably efficient algorithm with little prompting, and analyzed its time and space complexity correctly.",
+      "Reached the optimal algorithm quickly and independently, and reasoned fluently about alternatives and their complexity trade-offs."
+    ]
+  },
+  {
+    name: "coding",
+    label: "Coding",
+    scores: [
+      "Struggled to turn the idea into code. The implementation stayed largely incomplete or never worked.",
+      "Produced working code only with help. It was disorganized or buggy, and the interviewer had to point out defects.",
+      "Wrote clean, mostly correct code at a steady pace and caught most of their own mistakes without help.",
+      "Wrote clean, correct, idiomatic code quickly, with sensible naming and edge cases handled before being asked."
+    ]
+  },
+  {
+    name: "communication",
+    label: "Communication",
+    scores: [
+      "Worked in silence, or explained their reasoning so unclearly that it was hard to follow what they were doing.",
+      "Explained some of their steps, but had to be asked repeatedly to think out loud or to clarify what they meant.",
+      "Narrated their thinking clearly, asked useful clarifying questions, and responded well to feedback during the session.",
+      "Communicated like a strong collaborator throughout: crisp explanations, well-chosen questions, and easy to follow at every step."
+    ]
+  },
+  {
+    name: "problem-solving",
+    label: "Problem Solving",
+    scores: [
+      "Got stuck early and could not make meaningful progress, even after significant guidance.",
+      "Made progress mainly on the back of hints, and struggled to recover from wrong turns without help.",
+      "Broke the problem down methodically, tested ideas against examples, and recovered from dead ends with only light nudging.",
+      "Drove the problem from start to finish independently, spotted the key insight early, and validated it before writing any code."
+    ]
+  }
+];
+
+const intervieweeFinal = [
+  ["Strong No Hire",  "Performance was clearly below the bar across the board. You would argue against hiring this candidate."],
+  ["No Hire",         "Fell short of the bar on more than one dimension. You would not advance this candidate."],
+  ["Leaning No Hire", "Slightly below the bar. You have real reservations, but other rounds could change your mind."],
+  ["Leaning Hire",    "Slightly above the bar. A few weak spots remain, but you would tentatively advance this candidate."],
+  ["Hire",            "Met the bar comfortably on every dimension. You would advance this candidate without hesitation."],
+  ["Strong Hire",     "Well above the bar. You would actively argue in favor of hiring this candidate."]
+];
+
+const interviewerRows = [
+  {
+    name: "prompt-clarity",
+    label: "Prompt Clarity",
+    scores: [
+      "The question was explained confusingly or incompletely, and important requirements only surfaced much later.",
+      "The question was mostly clear, but some details had to be dragged out through follow-up questions.",
+      "The question was stated clearly and completely up front, with examples and constraints spelled out."
+    ]
+  },
+  {
+    name: "hint-giving",
+    label: "Hint Giving",
+    scores: [
+      "Hints were missing when they were badly needed, or so heavy-handed that they gave the solution away.",
+      "Hints were reasonable but mistimed - too early, too late, or bigger than the situation called for.",
+      "Hints were well-timed and minimal: enough to unblock without solving. Give a 3 if you never needed a hint."
+    ]
+  }
+];
+
+const interviewerFinal = [
+  ["Bad",      "The session did not work as an interview simulation. You would not want to be matched with this partner again."],
+  ["Mediocre", "There was some value in the session, but it fell well short of a realistic interview experience."],
+  ["Good",     "A solid, realistic interview simulation with feedback you can actually act on."],
+  ["Great",    "An excellent interviewer: well prepared, realistic, and genuinely useful in their feedback."]
+];
+
+/* ------------------------------------------------------------------
+   Rendering
+   ------------------------------------------------------------------ */
+
+// Every score that has a description, so a selection restored by the browser
+// (reload, back/forward) can be re-applied on load.
+const scored = [];
+
+function pin(descEl, text) {
+  descEl.selectedText = text;
+  descEl.innerHTML = text;
+}
+
+function syncSelections() {
+  scored.forEach(entry => {
+    if (entry.input.checked) pin(entry.descEl, entry.text);
+  });
+}
+
+function bindDescription(cell, input, descEl, text) {
+  // Hovering or focusing a score previews it. Leaving falls back to whichever
+  // score is currently selected for this row, so the choice stays visible.
+  const preview = () => { descEl.innerHTML = text; };
+  const restore = () => { descEl.innerHTML = descEl.selectedText || ""; };
+
+  cell.addEventListener("mouseenter", preview);
+  cell.addEventListener("mouseleave", restore);
+  input.addEventListener("focus", preview);
+  input.addEventListener("blur", restore);
+  input.addEventListener("change", () => {
+    if (input.checked) pin(descEl, text);
+  });
+
+  scored.push({ input: input, descEl: descEl, text: text });
+}
+
+function makeRadio(name, value, ariaLabel) {
+  const input = document.createElement("input");
+  input.type = "radio";
+  input.name = name;
+  input.value = value;
+  input.setAttribute("aria-label", ariaLabel);
+  return input;
+}
+
+function renderGrid(container, rows) {
+  rows.forEach(row => {
+    const rowEl = document.createElement("div");
+    rowEl.className = "rating-row";
+
+    const labelEl = document.createElement("div");
+    labelEl.className = "row-label";
+    labelEl.textContent = row.label;
+    rowEl.appendChild(labelEl);
+
+    const descEl = document.createElement("div");
+    descEl.className = "desc";
+
+    row.scores.forEach((text, i) => {
+      const cell = document.createElement("label");
+      cell.className = "cell";
+      const input = makeRadio(row.name, String(i + 1), row.label + " " + (i + 1));
+      cell.appendChild(input);
+      bindDescription(cell, input, descEl, text);
+      rowEl.appendChild(cell);
+    });
+
+    container.appendChild(rowEl);
+    container.appendChild(descEl);
+  });
+}
+
+function renderFinal(container, name, options) {
+  const cols = "repeat(" + options.length + ", 1fr)";
+
+  const head = document.createElement("div");
+  head.className = "final-head";
+  head.style.gridTemplateColumns = cols;
+
+  const rowEl = document.createElement("div");
+  rowEl.className = "final-row";
+  rowEl.style.gridTemplateColumns = cols;
+
+  const descEl = document.createElement("div");
+  descEl.className = "desc";
+
+  options.forEach(([label, text], i) => {
+    const heading = document.createElement("span");
+    heading.textContent = label;
+    head.appendChild(heading);
+
+    const cell = document.createElement("label");
+    cell.className = "cell";
+    const input = makeRadio(name, String(i + 1), label);
+    cell.appendChild(input);
+    bindDescription(cell, input, descEl, text);
+    rowEl.appendChild(cell);
+  });
+
+  container.appendChild(head);
+  container.appendChild(rowEl);
+  container.appendChild(descEl);
+}
+
+renderGrid(document.getElementById("interviewee-grid"), intervieweeRows);
+renderFinal(document.getElementById("interviewee-final"), "interviewee-final-score", intervieweeFinal);
+renderGrid(document.getElementById("interviewer-grid"), interviewerRows);
+renderFinal(document.getElementById("interviewer-final"), "interviewer-final-score", interviewerFinal);
+
+// Radios restored by the browser never fire "change", so re-apply them here.
+syncSelections();
+window.addEventListener("load", syncSelections);
+window.addEventListener("pageshow", syncSelections);
+</script>
+
+</body>
+</html>
